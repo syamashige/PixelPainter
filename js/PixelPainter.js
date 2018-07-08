@@ -23,7 +23,16 @@ for (var i = 0; i < palette.length; i++) {
     paletteSwatches.className = 'swatches';
     paletteSwatches.style.backgroundColor = palette[i];
     colorPalette.appendChild(paletteSwatches);
-    console.log(palette[i]);
+    // console.log(palette[i]);
+
+    // var swatchPicker = document.getElementsByClassName('swatches');
+    // for (var j = 0; j < swatchPicker.length; j++) {
+    //     swatchPicker[j].addEventListener('click', grabColorSwatch);
+    // }
+    // function grabColorSwatch (event) {
+    //     var grabColor = this.querySelectorAll('.palette')[0];
+    //     console.log(grabColor);
+    // }
 }
 
 //Eraser Button
@@ -56,4 +65,7 @@ for (row = 0; row <= 10; row++) {
     }
 }
 
+
+
+//Use this to get the dimensions of a certain box/div
 //console.log(box.getBoundingClientRect()); 
