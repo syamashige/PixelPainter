@@ -1,0 +1,68 @@
+body {
+    height: 75%;
+    width: 75%;
+}
+
+#palette {
+    border: 1px solid black;
+    height: 75%;
+    width: 25%;
+    position: fixed;
+    padding-left: 20px;   
+    padding-top: 20px;
+}
+
+.swatches {
+    /* flex-wrap: wrap; */
+    border: 1px solid grey;
+    height: 10%;
+    width: 16%;
+    display: inline-block;
+    margin: 5px;
+
+}
+
+#eraser, #clear {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 40px; 
+    width: 95%;
+    display: block;
+    margin: auto;
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+
+
+
+#canvas {
+    border: 1px solid black;
+    height: 77%;
+    width:65%;
+    position: absolute;
+    right: 5%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.row, .column {
+    border: 1px solid black;
+    height: 8.85%;
+    width: 8%;
+    display: inline-block;
+    /* flex-flow:wrap; */
+    padding-right: 0px;
+    
+}
+
+/* .row {
+    flex-direction: row;
+    flex-flow: wrap;
+}
+
+.column {
+    flex-direction: column;
+    flex-flow: wrap;
+} */
+
