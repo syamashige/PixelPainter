@@ -5,7 +5,7 @@
 #colors {
     /* border: 1px solid black; */
     height: 800px;
-    width: 320px;
+    width: 450px;
     position: absolute;
     padding-left: 5px;   
     padding-top: 5px;
@@ -21,6 +21,7 @@
     width: 40px;
     display: inline-block;
     margin: 5px;
+    border-radius: 20px;
 
 }
 
@@ -42,7 +43,7 @@
 }
 
 #canvas {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 795px;
     width: 1050px;
     position: absolute;
