@@ -1,16 +1,18 @@
 body {
     height: 75%;
     width: 75%;
+    /* cursor: url("/assets/paintbrush_icon.png"), auto; */
 }
 
-#palette {
+#colors {
     border: 1px solid black;
     height: 75%;
     width: 25%;
     position: fixed;
-    padding-left: 20px;   
+    padding-left: 25px;   
     padding-top: 20px;
 }
+
 
 .swatches {
     /* flex-wrap: wrap; */
@@ -26,14 +28,12 @@ body {
     border: 1px solid black;
     border-radius: 10px;
     height: 40px; 
-    width: 95%;
+    width: 93%;
     display: block;
     margin: auto;
     margin-left: 0px;
     margin-top: 10px;
 }
-
-
 
 
 #canvas {
@@ -44,15 +44,18 @@ body {
     right: 5%;
     display: flex;
     flex-flow: row wrap;
+    background-color: none;
+    
 }
 
-.row, .column {
-    border: 1px solid black;
+.pixels {
+    border: 1px dotted grey;
     height: 8.85%;
     width: 8%;
     display: inline-block;
     /* flex-flow:wrap; */
-    padding-right: 0px;
+    padding-right: 0%;
+    background-color: none;
     
 }
 
