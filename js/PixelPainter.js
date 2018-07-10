@@ -1,13 +1,19 @@
 
 const palette = [
-    '#001308', '#001308', '#1e272c', '#0b1b1a', '#17241e', '#450c41', '#61275d', '#86b5d5', '#2c7f84', '#224a72', '#83b5bd', '#b9e8ec', '#fdfce6', '#f0ddbf', '#d88282', '#ce9e55', '#ffdcb0', '#b5ccba', '#8ab25b', '#256a74',
+    '#001308', '#001308', '#1e272c', '#0b1b1a', '#17241e',
+    '#450c41', '#61275d', '#86b5d5', '#2c7f84', '#224a72', 
+    '#83b5bd', '#b9e8ec', '#fdfce6', '#f0ddbf', '#d88282', 
+    '#ce9e55', '#ffdcb0', '#b5ccba', '#8ab25b', '#256a74',
     '#e8683c', '#f2c078', '#faedca', '#c1dbb3', '#89d8be', 
-    '#e7d1e0', '#f9def0', '#fbe8f6', '#f43433', '#f4eef4'
+    '#e7d1e0', '#f9def0', '#fbe8f6', '#f43433', '#f4eef4',
+
 ]
 //Add paintbrush cursor to the body 
 // document.body.style.cursor = "url('/assets/paintbrush_icon.png'), auto"
 
 let paletteCollector = null;
+
+
 
 // Container for the color swatches 
 var colorPalette = document.createElement('div');
@@ -46,7 +52,7 @@ paintCanvas.id = 'canvas';
 document.body.appendChild(paintCanvas);
 
 //Create the pixel boxes
-const pixelBoxes = 132;
+const pixelBoxes = 475;
 for (let j = 0; j < pixelBoxes; j++) {
     let thePixels = document.createElement('div');
     thePixels.className = 'pixels';
@@ -63,6 +69,7 @@ for (let j = 0; j < pixelListener.length; j++) {
 function addColor () {
     console.log('add color');
     this.style.backgroundColor = paletteCollector;
+    this.style.borderColor = paletteCollector;
 }
 
 //Eraser Button

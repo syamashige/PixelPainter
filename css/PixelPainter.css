@@ -1,24 +1,22 @@
-body {
-    height: 75%;
-    width: 75%;
+/* body {
+
     /* cursor: url("/assets/paintbrush_icon.png"), auto; */
-}
 
 #colors {
     border: 1px solid black;
-    height: 75%;
-    width: 25%;
+    height: 800px;
+    width: 320px;
     position: fixed;
-    padding-left: 25px;   
-    padding-top: 20px;
+    padding-left: 5px;   
+    padding-top: 5px;
 }
 
 
 .swatches {
     /* flex-wrap: wrap; */
     border: 1px solid grey;
-    height: 10%;
-    width: 16%;
+    height: 40px;
+    width: 40px;
     display: inline-block;
     margin: 5px;
 
@@ -28,30 +26,29 @@ body {
     border: 1px solid black;
     border-radius: 10px;
     height: 40px; 
-    width: 93%;
+    width: 285px;
     display: block;
     margin: auto;
-    margin-left: 0px;
+    margin-left: 5px;
     margin-top: 10px;
 }
 
 
 #canvas {
     border: 1px solid black;
-    height: 77%;
-    width:65%;
-    position: absolute;
+    height: 795px;
+    width: 1050px;
+    position: fixed;
     right: 5%;
     display: flex;
     flex-flow: row wrap;
-    background-color: none;
-    
+    background-color: none;   
 }
 
 .pixels {
     border: 1px dotted grey;
-    height: 8.85%;
-    width: 8%;
+    height: 40px;
+    width: 40px;
     display: inline-block;
     /* flex-flow:wrap; */
     padding-right: 0%;
