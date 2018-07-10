@@ -13,10 +13,13 @@ const palette = [
 
 let paletteCollector = null;
 
-
+let paletteBackground = document.createElement('img');
+paletteBackground.id = "paletteImage";
+paletteBackground.src = "/assets/color_palette.png";
+document.body.appendChild(paletteBackground);
 
 // Container for the color swatches 
-var colorPalette = document.createElement('div');
+let colorPalette = document.createElement('div');
 colorPalette.id = 'colors';
 document.body.appendChild(colorPalette);
 
@@ -105,6 +108,8 @@ function clearCanvas() {
     let clearingPixels = document.getElementsByClassName('pixels');
     for (let i = 0; i < clearingPixels.length; i++) {
         clearingPixels[i].style.backgroundColor = null;
+        clearingPixels[i].style.borderColor = "grey";
+        document.body.style.cursor = "default";
     }
 }
 

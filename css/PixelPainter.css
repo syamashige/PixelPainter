@@ -3,12 +3,14 @@
     /* cursor: url("/assets/paintbrush_icon.png"), auto; */
 
 #colors {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 800px;
     width: 320px;
-    position: fixed;
+    position: absolute;
     padding-left: 5px;   
     padding-top: 5px;
+    top: 200px;
+    left: 250px;
 }
 
 
@@ -33,16 +35,22 @@
     margin-top: 10px;
 }
 
+#paletteImage {
+    height: 800px;
+    width: 800px;
+    z-index: -1;
+}
 
 #canvas {
     border: 1px solid black;
     height: 795px;
     width: 1050px;
-    position: fixed;
-    right: 5%;
+    position: absolute;
+    right: 20px;
     display: flex;
     flex-flow: row wrap;
     background-color: none;   
+    top: 50px;
 }
 
 .pixels {
@@ -52,7 +60,6 @@
     display: inline-block;
     /* flex-flow:wrap; */
     padding-right: 0%;
-    background-color: none;
     
 }
 
