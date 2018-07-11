@@ -25,6 +25,11 @@
 
 }
 
+.stamps {
+    height: 40px;
+    width: 40px;
+}
+
 #eraser, #clear {
     border: 1px solid black;
     border-radius: 10px;
@@ -61,6 +66,8 @@
     display: inline-block;
     /* flex-flow:wrap; */
     padding-right: 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
     
 }
 

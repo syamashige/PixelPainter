@@ -1,4 +1,5 @@
 
+//Array of colors
 const palette = [
     '#641516', '#7b241C', '#922B21', '#A93226', '#C0392B', '#CD6155', '#D98880', '#E6B0AA', 
     // '#78281F', '#943126', '#B03A2E', '#CB4335', '#E74C3C', '#EC7063', '#F1948A', '#F5B7B1',
@@ -14,10 +15,27 @@ const palette = [
     '#626567', '#797D7F', '#909497', '#A6ACAF', '#BDC3C7', '#CACFD2' ,'#D7DBDD', '#E5E7E9',
     '#7B7D7D', '#979A9A', '#B3B6B7', '#D0D3D4', '#ECF0F1', '#F0F3F4', '#F4F6F7', '#F7F9F9'
 ];
+
+//Array of stamps
+const stamps = [
+    "/assets/kawaii-banana.png", 
+    "/assets/kawaii-burger.png", 
+    "/assets/kawaii-donut.png", 
+    "/assets/kawaii-fries.png", 
+    "/assets/kawaii-icecream.png", 
+    "/assets/kawaii-pizza.png", 
+    "/assets/kawaii-strawberry.png", 
+    "/assets/dog1.png",
+    "/assets/cat1.png", 
+    "/assets/cat2.png", 
+];
+
+
 //Add paintbrush cursor to the body 
 // document.body.style.cursor = "url('/assets/paintbrush_icon.png'), auto"
 
 let paletteCollector = null;
+let imageCollector = null;
 
 let paletteBackground = document.createElement('img');
 paletteBackground.id = "paletteImage";
@@ -52,7 +70,27 @@ function grabColorSwatch() {
     document.body.style.cursor = "url('/assets/paintbrush_icon.png'), auto";
     paletteCollector = this.style.backgroundColor;
     console.log(paletteCollector);
+    imageCollector = null;
 }
+
+let stampContainer = document.createElement('div');
+stampContainer.id = 'stampContainer';
+colorPalette.appendChild(stampContainer);
+
+for (let i = 0; i < stamps.length; i++) {
+    let stampImages = document.createElement('img');
+    stampImages.className = 'stamps';
+    stampImages.src = stamps[i];
+    stampContainer.appendChild(stampImages);
+    stampImages.addEventListener('click', addStamp);
+}
+
+function addStamp() {
+    console.log('pick a stamp');
+    imageCollector = this.getAttribute('src');
+    console.log(imageCollector);
+}
+
 
 
 //Container for the canvas pixels
@@ -79,7 +117,10 @@ function addColor () {
     console.log('add color');
     this.style.backgroundColor = paletteCollector;
     this.style.borderColor = paletteCollector;
+    this.style.backgroundImage = 'url(' + imageCollector + ')';
 }
+
+//Div for the Eraser and Clear buttons
 
 //Eraser Button
 let eraserButton = document.createElement('button');
@@ -91,6 +132,7 @@ eraserButton.addEventListener('click', eraseColor);
 function eraseColor() {
     console.log('eraser is go')
     paletteCollector = null;
+    imageCollector = null;
 }
 document.getElementById('eraser').addEventListener('click', showEraserIcon); 
 
@@ -116,6 +158,7 @@ function clearCanvas() {
         clearingPixels[i].style.backgroundColor = null;
         clearingPixels[i].style.borderColor = "grey";
         document.body.style.cursor = "default";
+        clearingPixels[i].style.backgroundImage = null;
     }
 }
 
